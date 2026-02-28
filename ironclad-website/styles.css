@@ -1,0 +1,157 @@
+/* Ironclad Software Consulting - Colours aligned with logo (maroon + gold) */
+:root {
+  --ironclad-primary: #2d1810;
+  --ironclad-accent: #8B2942;
+  --ironclad-accent-hover: #6B2033;
+  --ironclad-gold: #C9A227;
+  --ironclad-gold-muted: #E8D48B;
+  --ironclad-muted: #5c4a42;
+  --ironclad-bg: #faf8f5;
+  /* Bootstrap primary = maroon to match logo */
+  --bs-primary: #8B2942;
+  --bs-primary-rgb: 139, 41, 66;
+}
+
+* {
+  scroll-margin-top: 76px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ironclad-primary);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: transparent;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar.navbar-scrolled {
+  background: rgba(45, 24, 16, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Logo image (your company logo from LinkedIn) */
+.img-logo {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navbar-logo.img-logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Hero/footer logos removed – logo only in header */
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+/* Hero – warm dark to complement logo */
+.hero {
+  background: linear-gradient(165deg, #2d1810 0%, #4a2520 45%, #5c3028 100%);
+  color: #fff;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ironclad-gold-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.hero h1 {
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.hero .lead {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 1.15rem;
+}
+
+.hero .btn-primary {
+  background: var(--ironclad-accent);
+  border-color: var(--ironclad-accent);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+.hero .btn-primary:hover {
+  background: var(--ironclad-accent-hover);
+  border-color: var(--ironclad-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(139, 41, 66, 0.45);
+}
+
+/* Section titles */
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ironclad-primary);
+}
+
+/* Service cards */
+.service-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08) !important;
+}
+
+.service-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+/* Mission banner – maroon to match logo */
+.mission-banner {
+  background: linear-gradient(135deg, #2d1810 0%, #5c2832 50%, #8B2942 100%);
+  color: #fff;
+}
+
+.mission-banner .section-title {
+  color: #fff;
+}
+
+/* Footer */
+footer a {
+  color: inherit;
+}
+
+footer a:hover {
+  color: var(--ironclad-gold-muted);
+}
+
+/* Utilities */
+.bg-light {
+  background-color: var(--ironclad-bg) !important;
+}
+
+@media (max-width: 991.98px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+}
