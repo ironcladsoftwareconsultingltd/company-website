@@ -110,6 +110,19 @@ body {
   color: var(--ironclad-primary);
 }
 
+/* Service icon */
+.service-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(139, 41, 66, 0.1) 0%, rgba(201, 162, 39, 0.12) 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--ironclad-accent);
+}
+
 /* Service cards */
 .service-card {
   border-radius: 12px;
@@ -145,13 +158,111 @@ footer a:hover {
   color: var(--ironclad-gold-muted);
 }
 
+.footer-nav-link {
+  transition: color 0.2s;
+}
+
 /* Utilities */
 .bg-light {
   background-color: var(--ironclad-bg) !important;
 }
 
+/* py-6 spacing utility (Bootstrap only goes to 5) */
+.py-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+@media (min-width: 992px) {
+  .py-lg-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+}
+
+/* Mobile navbar: ensure collapsed menu is readable over transparent bg */
 @media (max-width: 991.98px) {
   .hero h1 {
     font-size: 2.25rem;
   }
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background: rgba(45, 24, 16, 0.97);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Technologies section */
+.tech-section-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ironclad-muted);
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-icon {
+  filter: grayscale(1) opacity(0.45);
+  transition: filter 0.2s ease;
+}
+
+.tech-item:hover .tech-icon {
+  filter: grayscale(0) opacity(1);
+}
+
+.tech-name {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ironclad-muted);
+  text-align: center;
+}
+
+/* Contact cards */
+.contact-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(45, 24, 16, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(45, 24, 16, 0.1);
+}
+
+.contact-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(139, 41, 66, 0.1) 0%, rgba(201, 162, 39, 0.12) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.35rem;
+  color: var(--ironclad-accent);
+}
+
+.contact-link {
+  color: var(--ironclad-primary);
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--ironclad-accent);
+}
+
+.contact-email {
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
