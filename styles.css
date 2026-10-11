@@ -150,16 +150,47 @@ body {
 }
 
 /* Footer */
-footer a {
-  color: inherit;
+.site-footer {
+  background: #1f1512 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
-footer a:hover {
+.site-footer .footer-tagline {
+  max-width: 26rem;
+  line-height: 1.7;
+}
+
+.site-footer .footer-heading {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.site-footer .footer-links li + li {
+  margin-top: 0.6rem;
+}
+
+.site-footer .footer-links a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-links a:hover {
   color: var(--ironclad-gold-muted);
 }
 
-.footer-nav-link {
-  transition: color 0.2s;
+.site-footer .footer-legal {
+  line-height: 1.7;
+}
+
+.site-footer hr {
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Utilities */
